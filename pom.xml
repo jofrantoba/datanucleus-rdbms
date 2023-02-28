@@ -22,7 +22,8 @@
     </scm>
 
     <properties>
-        <dn.core.version>6.0.0-m1</dn.core.version>
+        <!--<dn.core.version>6.0.0-m1</dn.core.version>-->
+        <dn.core.version>6.0.4-SNAPSHOT</dn.core.version>
     </properties>
 
     <build>
@@ -74,6 +75,19 @@
                         </Import-Package>
                     </instructions>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
